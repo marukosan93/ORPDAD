@@ -51,7 +51,8 @@ ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size 
 ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped videos, bvp and ecg, spatial-temporal maps, landmarks )
 ├── 0XX # participants ID goes from 001 to 030
 │   ├── blockh5
-│   │   └──  SCEN_block128.h5
+│   │   ├──  SCEN_block128.h5
+│   │   └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── maps
 │   │   ├──  SCEN_mstmap.npy
 │   │   └──  SCEN_stmap.npy
