@@ -47,7 +47,8 @@ For the illumination attacks we design two modulated light panels that each oper
 ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
 ├── 0XX # participants ID goes from 001 to 030
 │   └── video
-│       └──  SCEN.mov # where SCEN corresponds to S1-S3, I1-I6, M1-M11, C1-C6
+│       ├──  SCEN.mov # ≈70s(≈2100frames) RGB video at 1920x1080 30fps
+│       └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped videos, bvp and ecg, spatial-temporal maps, landmarks )
 ├── 0XX # participants ID goes from 001 to 030
 │   ├── blockh5
@@ -55,15 +56,19 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   │   └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── maps
 │   │   ├──  SCEN_mstmap.npy
-│   │   └──  SCEN_stmap.npy
+│   │   ├──  SCEN_stmap.npy
+│   │   └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── ecg
 │   │   ├──  SCEN_ecg.npy
-│   │   └──  SCEN_pseudobvp.npy
+│   │   ├──  SCEN_pseudobvp.npy
+│   │   └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── bvp
 │   │   ├──  SCEN_bvp.npy
-│   │   └──  SCEN_hr.npy
-│   ├── lnd
-│   │   └──  SCEN_lnd.npy
+│   │   ├──  SCEN_hr.npy
+│   │   └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
+│   └── lnd
+│       ├──  SCEN_lnd.npy
+│       └──  ..... # for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 ```
 
 # Evaluation Protocols 
