@@ -71,6 +71,12 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 ```
 
 # Evaluation Protocols 
+To ensure fair validation we adopt a 5-fold subject exclusive protocol for all experiments. E.g. Fold1 test: 001-005 train: 006-030, Fold2 test: 006-010 train: 001-005 and 011-030, ...
+For Deep Learning Methods two different training conditions:
+- Attack Unaware (AU), Training set includes only (S1-S3)
+- Attack Aware (AA), Training set includes all scenarios (S1-S3, I1-I6, M1-M11, C1-C6)
+
+or AA we add an attack frequency exclusive cross-validation to the protocol, we train on all passive scenarios and active scenarios with one attack frequency, and then test on the non-seen attack frequency. As the attack frequencies are fixed, supervised methods could easily cheat by learning to not predict the seen specific attack frequency, without learning any useful features from the attacks. Our AA protocol is aware of the attacks, but not of the specific attack frequency. In testing 30 second non-overlapping segments are evaluated, and we calculate the HR by finding the highest PSD peak. 
 
 # Training/Evaluation code
 
