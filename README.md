@@ -54,10 +54,15 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   │   └──  SCEN_block128.h5
 │   ├── maps
 │   │   ├──  SCEN_mstmap.npy
-    │   └──  SCEN_stmap.npy
-
-
-
+│   │   └──  SCEN_stmap.npy
+│   ├── ecg
+│   │   ├──  C1_ecg.npy
+│   │   └──  C1_pseudobvp.npy
+│   ├── bvp
+│   │   ├──  C1_bvp.npy
+│   │   └──  C1_hr.npy
+│   ├── lnd
+│   │   └──  SCEN_lnd.npy
 ```
 
 # Evaluation Protocols 
