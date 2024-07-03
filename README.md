@@ -82,7 +82,7 @@ In practice we keep the frequencies separate in the training and testing set, on
 - Test on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6)  <br>
 - Train on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6) <br>
 - Test on S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6)  <br>
-Finally, for the the non-frequnecy specific scenarios S1-S3, M11, C1-C6 we average over both, for the frequency specific ones take only the cross-validated outputs.
+Finally, for the the non-frequnecy specific scenarios S1-S3, M11, C1-C6 we average over both, for the frequency specific ones take only the cross-frequency validated outputs.
 
 # Training/Evaluation code
 
