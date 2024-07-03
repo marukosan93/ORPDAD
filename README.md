@@ -68,6 +68,10 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   └── lnd
 │       ├──  SCEN_lnd.npy 68 point facial landmark coordinates calculated using PyFeat [T≈2100, L=68, XY=2]
 │       └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
+ORPDAD_MODELS_AND_LOGS.tar.gz #contains all the trained .pth models and training logs
+└──  records
+    ├── model #contains .pth trained models for each evaluted DL method for all 5 folds in still(AU) -> S1-S3, all50(AA 50bpm) -> S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6) and all100 (AA 100bpm) -> S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6)
+    └── logs #recorded losses for each trained model
 ```
 
 # Evaluation Protocols 
