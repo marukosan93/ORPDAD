@@ -59,15 +59,15 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   │   ├──  SCEN_stmap.npy # Spatial-temporal map similar to MSTmap, but only containing signals from the 6 ROIs and their union, without all the other ROI combinations. [R=7, T≈2100, C=3]
 │   │   └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── ecg
-│   │   ├──  SCEN_ecg.npy
-│   │   ├──  SCEN_pseudobvp.npy
+│   │   ├──  SCEN_ecg.npy # 1000Hz ECG signal [T_ecg≈70000]
+│   │   ├──  SCEN_pseudobvp.npy # 30Hz BVP signal derived from ECG [T≈2100], used for all experiments as it is more accurate than the signal obtain from the finger PPG
 │   │   └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   ├── bvp
-│   │   ├──  SCEN_bvp.npy
-│   │   ├──  SCEN_hr.npy
+│   │   ├──  SCEN_bvp.npy # 30Hz BVP signal derived from PPG [T≈2100], less accurate than ECG derived BVP
+│   │   ├──  SCEN_hr.npy # 1Hz HR calculated for each second by the PPG device [T_hr≈70]
 │   │   └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 │   └── lnd
-│       ├──  SCEN_lnd.npy
+│       ├──  SCEN_lnd.npy 68 point facial landmark coordinates calculated using PyFeat [T≈2100, L=68, XY=2]
 │       └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
 ```
 
