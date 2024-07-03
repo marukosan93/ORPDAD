@@ -56,11 +56,11 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   │   ├──  SCEN_mstmap.npy
 │   │   └──  SCEN_stmap.npy
 │   ├── ecg
-│   │   ├──  C1_ecg.npy
-│   │   └──  C1_pseudobvp.npy
+│   │   ├──  SCEN_ecg.npy
+│   │   └──  SCEN_pseudobvp.npy
 │   ├── bvp
-│   │   ├──  C1_bvp.npy
-│   │   └──  C1_hr.npy
+│   │   ├──  SCEN_bvp.npy
+│   │   └──  SCEN_hr.npy
 │   ├── lnd
 │   │   └──  SCEN_lnd.npy
 ```
