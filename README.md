@@ -29,3 +29,13 @@ For each recording we provide:
 - 128x128 cropped videos centered at the face (for end-to-end methods)
 - 68 point facial landmarks for each frame
 - spatial-temporal map representations for each video (for non-end-to-end methods)
+
+# How ORPDAD was collected
+
+# Dataset Structure
+
+# Evaluation Protocols 
+
+# Training/Evaluation code
+
+# Pre-processing code
