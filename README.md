@@ -11,14 +11,14 @@ As rPPG is an emerging technology that deals with sensitive data and could be em
 
 # What does ORPDAD contain
 
-We record data from **30 participants** ( with no history of heart disease) under different scenarios based on the three aforementioned categories of attacks. We record **70 second** videos for each scenario, for a total of 26 scenarios per subject, resulting in 780 videos equivalent to around 15.2h of footage. For the synchronised ground truth physiological signals we record both PPG waveforms via a finger-oximeter and ECG waveforms via an ECG device. Based on the defined attack categories, we define the following scenarios:
+We record data from **30 participants** ( with no history of heart disease) under different scenarios based on the three aforementioned categories of attacks. We record **70 second** videos for each scenario, for a total of **26 scenarios** per subject, resulting in **780 videos** equivalent to around **15.2h** of footage. For the synchronised ground truth physiological signals we record both PPG waveforms via a finger-oximeter and ECG waveforms via an ECG device. Based on the defined attack categories, we define the following scenarios:
 
-* Still (S1-S3): Subject is recorded at a still and resting state before each attack category. Motion is kept at a comfortable minimum.
+* **Still (S1-S3)**: Subject is recorded at a still and resting state before each attack category. Motion is kept at a comfortable minimum.
 
-* Illumination (I1-I6): We combine the two attack frequencies (50bpm, 100bpm) and three different intensity settings (S=7\%, M=14\% and L=21\% of the attack device max brightness), resulting in I1=50S, I2=50M, I3=50L, I4=100S, I5=100M, I6=100L. The intensities are much weaker than the base lighting, and cause perturbations are visually imperceptible in the recordings.
+* **Illumination (I1-I6)**: We combine the two attack frequencies (50bpm, 100bpm) and three different intensity settings (S=7\%, M=14\% and L=21\% of the attack device max brightness), resulting in I1=50S, I2=50M, I3=50L, I4=100S, I5=100M, I6=100L. The intensities are much weaker than the base lighting, and cause perturbations are visually imperceptible in the recordings.
 
-* Movement (M1-M11): We explore simple movements such as small vertical (SV), large vertical (LV), small horizontal (SH), large horizontal (LH), mouth open/close (M) at the two target frequencies (50bpm, 100bpm). Resulting in M1=50SV, M2=50LV, M3=50SH, M4=50LH,  M5=50M, M6=100SV, M7=100LV, M8=100SH, M9=100LH,  M10=100M. We also include natural talking motion M11 that is not at a set attack frequency.
+* **Movement (M1-M11)**: We explore simple movements such as small vertical (SV), large vertical (LV), small horizontal (SH), large horizontal (LH), mouth open/close (M) at the two target frequencies (50bpm, 100bpm). Resulting in M1=50SV, M2=50LV, M3=50SH, M4=50LH,  M5=50M, M6=100SV, M7=100LV, M8=100SH, M9=100LH,  M10=100M. We also include natural talking motion M11 that is not at a set attack frequency.
 
-* Concealment (C1-C6): The first three opaque (C1-C3) scenarios involve wearing a forehead concealing beanie C1, a facial mask C2 and then both C3. The transparent concealment scenarios (C4-C6) contain progressive application of make-up with primer C4, foundation C5 and setting powder C6.
+* **Concealment (C1-C6)**: The first three opaque (C1-C3) scenarios involve wearing a forehead concealing beanie C1, a facial mask C2 and then both C3. The transparent concealment scenarios (C4-C6) contain progressive application of make-up with primer C4, foundation C5 and setting powder C6.
 
 ![ATTACKVIS](visualisation_of_example_attack_scenarios.png)
