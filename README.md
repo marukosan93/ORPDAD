@@ -46,8 +46,13 @@ For the illumination attacks we design two modulated light panels that each oper
 ```
 ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
 ├── 0XX # participants ID goes from 001 to 030
-│   ├── file11.ext
-│   └──
+│   └── video
+│       └──  SCEN.mov # where SCEN corresponds to S1-S3, I1-I6, M1-M11, C1-C6
+ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
+├── 0XX # participants ID goes from 001 to 030
+│   └── video
+│       └──  SCEN.mov # where SCEN corresponds to S1-S3, I1-I6, M1-M11, C1-C6
+
 
 ```
 
