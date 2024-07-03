@@ -43,8 +43,12 @@ For the illumination attacks we design two modulated light panels that each oper
 # Dataset Structure
 
 
-```bash
-python randomize_batches.py scenarios.csv studyname 72 5 1
+```
+ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
+├── 0XX # participants ID goes from 001 to 030
+│   ├── file11.ext
+│   └──
+
 ```
 
 # Evaluation Protocols 
