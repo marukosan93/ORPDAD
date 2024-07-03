@@ -21,3 +21,4 @@ We record data from 30 healthy (no history of heart disease) volunteers under di
 
 * Concealment (C1-C6): The first three opaque (C1-C3) scenarios involve wearing a forehead concealing beanie C1, a facial mask C2 and then both C3. The transparent concealment scenarios (C4-C6) contain progressive application of make-up with primer C4, foundation C5 and setting powder C6.
 
+![ATTACKVIS](visualisation_of_example_attack_scenarios.png)
