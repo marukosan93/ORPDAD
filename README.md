@@ -22,3 +22,10 @@ We record data from **30 participants** ( with no history of heart disease) unde
 * **Concealment (C1-C6)**: The first three opaque (C1-C3) scenarios involve wearing a forehead concealing beanie C1, a facial mask C2 and then both C3. The transparent concealment scenarios (C4-C6) contain progressive application of make-up with primer C4, foundation C5 and setting powder C6.
 
 ![ATTACKVIS](visualisation_of_example_attack_scenarios.png)
+
+For each recording we provide:
+- 1920x1080p 30fps RGB video
+- synchronised groundtruth from both PPG and ECG devices
+- 128x128 cropped videos centered at the face (for end-to-end methods)
+- 68 point facial landmarks for each frame
+- spatial-temporal map representations for each video (for non-end-to-end methods)
