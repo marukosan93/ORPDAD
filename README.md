@@ -41,8 +41,7 @@ For the illumination attacks we design two modulated light panels that each oper
 
 
 # Dataset Structure
-
-
+The dataset contains RGB videos, time aligned PPG and ECG waveforms, face center cropped videos, spatial-temporal maps and facial landmarks
 ```
 ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
 ├── 0XX # participants ID goes from 001 to 030
