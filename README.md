@@ -30,6 +30,7 @@ For each recording we provide:
 - 128x128 cropped videos centered at the face (for end-to-end methods)
 - 68 point facial landmarks for each frame
 - spatial-temporal map representations for each video (for non-end-to-end methods)
+We also provide the trained models and code used to establish the baselines from our paper
 
 # How ORPDAD was collected
 To study each attack vector in an isolated manner, we setup a controlled recording environment as to minimise the influence of external factors that are not related to the attack. Thus, we keep the same base environment for all subjects and scenarios, enabling us to study the specific contribution induced by the attacks. For the base video recordings we use a professional RGB camera and two fixed led lights. We record the physiological signals with a finger PPG oximeter and a portable ECG belt device. All the recording devices are synchronised by keeping internal clock times consistent. The subjects are seated at ≈1m from the camera and the lights are positioned above the camera and illuminate the subject at a 45° angle at ≈1.5m distance. 
@@ -41,7 +42,7 @@ For the illumination attacks we design two modulated light panels that each oper
 
 
 # Dataset Structure
-The dataset contains RGB videos, time aligned PPG and ECG waveforms, face center cropped videos, spatial-temporal maps and facial landmarks
+The dataset contains RGB videos, time aligned PPG and ECG waveforms, face center cropped videos, spatial-temporal maps and facial landmarks. It also containts baseline models trained on the data.
 ```
 ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
 ├── 0XX # participants ID goes from 001 to 030
