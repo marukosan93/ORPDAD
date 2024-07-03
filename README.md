@@ -48,10 +48,14 @@ ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size 
 ├── 0XX # participants ID goes from 001 to 030
 │   └── video
 │       └──  SCEN.mov # where SCEN corresponds to S1-S3, I1-I6, M1-M11, C1-C6
-ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
+ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped videos, bvp and ecg, spatial-temporal maps, landmarks )
 ├── 0XX # participants ID goes from 001 to 030
-│   └── video
-│       └──  SCEN.mov # where SCEN corresponds to S1-S3, I1-I6, M1-M11, C1-C6
+│   ├── blockh5
+│   │   └──  SCEN_block128.h5
+│   ├── maps
+│   │   ├──  SCEN_mstmap.npy
+    │   └──  SCEN_stmap.npy
+
 
 
 ```
