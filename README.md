@@ -42,6 +42,11 @@ For the illumination attacks we design two modulated light panels that each oper
 
 # Dataset Structure
 
+
+```bash
+python randomize_batches.py scenarios.csv studyname 72 5 1
+```
+
 # Evaluation Protocols 
 
 # Training/Evaluation code
