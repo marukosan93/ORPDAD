@@ -83,10 +83,10 @@ For Deep Learning Methods two different training conditions:
 - Attack Aware (AA), Training set includes all scenarios (S1-S3, I1-I6, M1-M11, C1-C6)
 In addition for the AA protocol, to keep the specific attack frequency hidden from the networks we adopt an attack frequency cross validation (naturally while still doing 5-fold subject exclusive validation as well). As the attack frequencies are fixed, supervised methods could easily cheat by learning to not predict the seen specific attack frequency, without learning any useful features from the attacks. <br>
 In practice we keep the frequencies separate in the training and testing set, only keeping the non-frequency specific scenarios in common (S1-S3,M11,C1-C6):<br>
-- Train on S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6) <br>
-- Test on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6)  <br>
-- Train on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6) <br>
-- Test on S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6)  <br>
+- Cross-freq1: Train on S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6) <br>
+- Cross-freq1: Test on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6)  <br>
+- Cross-freq2: Train on S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6) <br>
+- Cross-freq2: Test on S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6)  <br>
 Finally, for the the non-frequnecy specific scenarios S1-S3, M11, C1-C6 we average over both, for the frequency specific ones take only the cross-frequency validated outputs.
 
 # Training/Evaluation code
