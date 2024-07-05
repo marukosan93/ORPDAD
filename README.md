@@ -44,12 +44,12 @@ For the illumination attacks we design two modulated light panels that each oper
 # Dataset Structure
 The dataset contains RGB videos, time aligned PPG and ECG waveforms, face center cropped videos, spatial-temporal maps and facial landmarks. It also containts baseline models trained on the data.
 ```
-ORPDAD_RGB_videos_partX.tar.gz #divided in X = 1,..., 10 parts for smaller size download files
+ORPDAD_RGB_videos_partX.zip #divided in X = 1,..., 10 parts for smaller size download files
 ├── 0XX # participants ID goes from 001 to 030
 │   └── video
 │       ├──  SCEN.mov # ≈70s(≈2100frames) RGB video at 1920x1080 30fps
 │       └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
-ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped videos, bvp and ecg, spatial-temporal maps, landmarks )
+ORPDAD_DATA.zip #contains all the processed data and ground truth (cropped videos, bvp and ecg, spatial-temporal maps, landmarks )
 ├── 0XX # participants ID goes from 001 to 030
 │   ├── blockh5
 │   │   ├──  SCEN_block128.h5 # SCEN_block128.h5["video"] is a  HDF5 wrapper for the numpy array containing the cropped video [T≈2100, H=128, W=128, C=3]
@@ -69,7 +69,7 @@ ORPDAD_DATA.tar.gz #contains all the processed data and ground truth (cropped vi
 │   └── lnd
 │       ├──  SCEN_lnd.npy 68 point facial landmark coordinates calculated using PyFeat [T≈2100, L=68, XY=2]
 │       └──  ..... # same for each of the 26 SCEN -> S1-S3, I1-I6, M1-M11, C1-C6
-ORPDAD_MODELS_AND_LOGS.tar.gz #contains all the trained .pth models and training logs
+ORPDAD_MODELS_AND_LOGS.zip #contains all the trained .pth models and training logs
 └──  records
     ├── model #contains .pth trained models for each evaluted DL method for all 5 folds in still(AU) -> S1-S3, all50(AA 50bpm) -> S(S1-S3),I-50bpm(I1-I3),M-50bpm(M1-M5 and M11), C(C1-C6) and all100 (AA 100bpm) -> S(S1-S3),I-100bpm(I4-I6),M-100bpm(M6-M10 and M11), C(C1-C6)
     └── logs #recorded losses for each trained model
