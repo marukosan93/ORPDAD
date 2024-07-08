@@ -1,3 +1,8 @@
+# TO DO
+- Training/evaluation code
+- comment code
+- add config libraries pip install
+
 # ORPDAD
  This is the official code repository of our dataset and ECCV 2024 paper entitled "Oulu Remote-photoplethysmography Physical Domain Attacks Database (OPDAD)". 
 
