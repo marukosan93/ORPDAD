@@ -92,3 +92,6 @@ Finally, for the the non-frequnecy specific scenarios S1-S3, M11, C1-C6 we avera
 # Training/Evaluation code
 
 # Pre-processing code
+
+The shared dataset includes face centered cropped videos, mstmaps and landmarks. However, we also provide code for obtaining the pre-processed data from the raw RGB videos. Firstly, calc_landmarks_pyfeat.py is used to calculate 68-point landmarks for each video frame. Secondly, for end-to-end methods input crop_faces_128_h5.py takes the raw RGB videos and landmarks and crops and resizes the videos to be 128x128 and face centered. Finally, for non-end-to-end methods, mstmap_hist_roi.py can be used to compute the multi-scale spatial temporal maps from the raw RGB videos, by defining ROIs based on the facial landmarks.
+ 
