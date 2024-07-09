@@ -18,6 +18,8 @@ from mpl_toolkits.mplot3d import Axes3D
 import json
 import h5py
 
+#Crops the face videos to 128x128 so that they are face centered and wraps numpy output using h5
+
 def running_mean(x, N):
     out = np.zeros_like(x, dtype=np.float64)
     dim_len = x.shape[0]
@@ -33,12 +35,6 @@ def running_mean(x, N):
         b = min(dim_len, b)
         out[i] = np.mean(x[a:b],axis=0)
     return out
-
-def poly2mask(polyarray,m,n):
-    img = Image.new('L', (n, m), 0)
-    ImageDraw.Draw(img).polygon(polyarray.flatten().tolist(), outline=1, fill=1)
-    mask = np.array(img)
-    return mask
 
 def crop_face(img,lmks):
     m,n,c = img.shape

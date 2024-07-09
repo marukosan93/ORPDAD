@@ -17,6 +17,10 @@ from mpl_toolkits.mplot3d import Axes3D
 #import exiftool
 import json
 
+
+# Python implementation of MSTmap from Niu, X. et al. "Video-based remote physiological measurement via cross-verified feature disentangling." Computer Vision–ECCV 2020
+
+#Outputs permutations of every single of the ROI combinarions, e.g. 000001,000010,..,111111
 def comb():
     X = [0,1]
     result = np.zeros((63,6))
@@ -27,7 +31,7 @@ def comb():
             result[number-1,:] = np.array(combination)
     return result.astype(int)
 
-
+#Computes N-point running mean
 def running_mean(x, N):
     out = np.zeros_like(x, dtype=np.float64)
     dim_len = x.shape[0]
@@ -44,6 +48,7 @@ def running_mean(x, N):
         out[i] = np.mean(x[a:b],axis=0)
     return out
 
+#transforms polygon to binary mask
 def poly2mask(polyarray,m,n):
     img = Image.new('L', (n, m), 0)
     ImageDraw.Draw(img).polygon(polyarray.flatten().tolist(), outline=1, fill=1)
@@ -72,6 +77,7 @@ def get_ROI_signal(img,mask):
         signal[0,0,i] = np.sum(tmp*mask)/np.sum(mask)
     return signal
 
+#reduces ROI size, so that there are less pixels bordering with outside of the face
 def shrinkroi(landsss,scala):
     shift = np.min(landsss,axis=0)+(np.max(landsss,axis=0)-np.min(landsss,axis=0))/2
     landsss = landsss - shift
@@ -116,12 +122,6 @@ def generate_signal_map(img,lmks,signal_map,mst_signal_map,background_map,idx,di
 
     masks = [mask_ROI_cheek_left1,mask_ROI_cheek_left2,mask_ROI_cheek_right1,mask_ROI_cheek_right2,mask_ROI_mouth,mask_ROI_forehead]
 
-    #b_side =int(np.sqrt(np.sum(mask_ROI_forehead)))
-
-    #b_x = int(face[2]+200)
-    #b_y = int(face[1])
-
-
     b_side = 120
 
     b_x = 1600
@@ -165,10 +165,6 @@ def generate_signal_map(img,lmks,signal_map,mst_signal_map,background_map,idx,di
         total_mask = np.zeros_like(image[:,:,0])
         for i in range(0,6):
             total_mask = total_mask + masks[i]
-        #if c > 1:
-        #    total_mask = np.stack([total_mask]*c,axis=2)
-
-
 
         fig, ax = plt.subplots(3,1,figsize=(4, 12))
         for ch in range(0,3):
@@ -262,25 +258,13 @@ total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)) #0 to total-1
 frames = range(0,total_frames)
 
 #files = [input_video]
-"""with exiftool.ExifToolHelper() as et:
-    metadata = et.get_metadata(files)[0]
-
-#print(metadata["Composite:SubSecDateTimeOriginal"])
-with open(os.path.join(outdir,file[:-4]+'_meta.txt'), 'w') as fyle:
-    for key in metadata:
-        fyle.write(str(key)+' = '+str(metadata[key])+"\n")"""
 
 ST_map = np.zeros((7,total_frames,3))
 MST_map = np.zeros((63,total_frames,3))
 BG_signal = np.zeros((total_frames,3))
 landmarks_array = np.load(file.replace(".mov","_lnd.npy").replace("video","lnd"))
 
-"""fig,ax = plt.subplots(2,1)
-ax[0].plot(landmarks_array[:60,0,0])"""
 landmarks_array = running_mean(landmarks_array,5)
-"""ax[1].plot(landmarks_array[:60,0,0])
-plt.show()
-exit()"""
 
 for frame_no in tqdm(frames):
     cap.set(1,frame_no)
@@ -304,6 +288,3 @@ for idx in range(0,MST_map.shape[0]):
 np.save(stmap_filename,ST_map)
 np.save(bgmap_filename,BG_signal)
 np.save(mstmap_filename,MST_map)
-
-#np.save(os.path.join(outdir,file[:-4]+'_stmap.npy'),ST_map)
-#np.save(os.path.join(outdir,file[:-4]+'_bgsig.npy'),BG_signal)
