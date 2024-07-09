@@ -1,0 +1,16 @@
+einops==0.8.0
+h5py==3.8.0
+heartpy==1.2.7
+matplotlib==3.6.3
+more_itertools==10.3.0
+numpy==1.23.5
+Pillow==9.4.0
+Pillow==10.4.0
+scikit_image==0.19.3
+scikit_learn==1.2.1
+scipy==1.10.0
+tensorboard_logger==0.1.0
+timm==0.6.12
+torch==1.13.1.post200
+torchvision==0.14.1a0+b69fce3
+tqdm==4.64.1
