@@ -90,6 +90,7 @@ In practice we keep the frequencies separate in the training and testing set, on
 Finally, for the the non-frequnecy specific scenarios S1-S3, M11, C1-C6 we average over both, for the frequency specific ones take only the cross-frequency validated outputs.
 
 # Training/Evaluation code
+In the training_testing_code directory is all the code needed to run the baseline methods. *MSTmap_loader.py* is the dataloader for non-end-to-end methods using MSTmaps, for end-to-end we use *deepphys_block_loader.py* for DeepPhys and TS-CAN, and *block_loader.py* for all others. The 3 provided .sh files contain example of how the provided scripts are used. To train, test and calculate metrics you can use *cvd_train_eval.sh* for non-end-to-end methods (just change cvd with another method). For end-to-end *physnet_train_eval.sh* is an example (for other methods just change method name from physnet to desired one). Finally, for hand-crafted methods just run *eval_trad.sh*. 
 
 # Pre-processing code
 
