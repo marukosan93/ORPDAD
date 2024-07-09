@@ -345,6 +345,11 @@ if __name__ == '__main__':
     model_saved_path = './records/model/' + method + '__' + train_dir + '__' + args.fold + '/'
     #output_saved_path = './records/output/' + method + '__' + train_dir + '__' + args.fold + '/'
 
+    if not os.path.exists(model_saved_path):
+        os.makedirs(model_saved_path)
+    if not os.path.exists(logdir):
+        os.makedirs(logdir)
+
     # loss_train and loss_valid must be in the same graph
     writer = {
         'loss_train': tensorboard.SummaryWriter(os.path.join(logdir, 'loss_train')),
@@ -367,8 +372,6 @@ if __name__ == '__main__':
         if losses_valid < loss_best:
             loss_best = losses_valid
             # save the model and output
-            if not os.path.exists(model_saved_path):
-                os.makedirs(model_saved_path)
             torch.save(model.state_dict(), os.path.join(model_saved_path, 'best.pth'))
 
         writer['loss_train'].add_scalar("loss", losses_train, epoch)

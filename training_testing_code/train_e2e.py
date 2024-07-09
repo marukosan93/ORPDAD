@@ -441,6 +441,11 @@ if __name__ == '__main__':
     logdir = './records/logs/' + method + '__' + train_dir + '__' + args.fold
     model_saved_path = './records/model/' + method + '__' + train_dir + '__' + args.fold + '/'
 
+    if not os.path.exists(model_saved_path):
+        os.makedirs(model_saved_path)
+    if not os.path.exists(logdir):
+        os.makedirs(logdir)
+
     writer = {
         'loss_train': tensorboard.SummaryWriter(os.path.join(logdir, 'loss_train')),
         'loss_rppg_train': tensorboard.SummaryWriter(os.path.join(logdir, 'loss_rppg_train')),
@@ -465,8 +470,6 @@ if __name__ == '__main__':
             = validate(valid_loader, model, epoch)
         if losses_valid < loss_best:
             loss_best = losses_valid
-            if not os.path.exists(model_saved_path):
-                os.makedirs(model_saved_path)
             torch.save(model.state_dict(), os.path.join(model_saved_path, 'best.pth'))
 
         writer['loss_train'].add_scalar("loss", losses_train, epoch)
