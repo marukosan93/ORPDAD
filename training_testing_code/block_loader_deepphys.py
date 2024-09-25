@@ -50,7 +50,7 @@ def diff_normalize_data(data):
     return diffnormalized_data
 
 
-class block_deephys(Dataset):
+class block_deepphys(Dataset):
     def __init__(self, data,stride,shuffle=True, resize_size=128,seq_len=576):
         self.data = data
         self.resize_size = resize_size
