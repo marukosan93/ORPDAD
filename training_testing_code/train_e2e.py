@@ -360,8 +360,8 @@ else:
     resize_size=128
 
 if method == "tscan" or method == "efficientphys" or method == "deepphys":
-    train_dataset = block_deephys(data=train_set,stride=train_stride,shuffle=True, resize_size=resize_size,seq_len=seq_len)
-    valid_dataset = block_deephys(data=valid_set,stride=seq_len,shuffle=False, resize_size=resize_size,seq_len=seq_len)
+    train_dataset = block_deepphys(data=train_set,stride=train_stride,shuffle=True, resize_size=resize_size,seq_len=seq_len)
+    valid_dataset = block_deepphys(data=valid_set,stride=seq_len,shuffle=False, resize_size=resize_size,seq_len=seq_len)
 else:
     train_dataset = block(data=train_set,stride=train_stride,shuffle=True, resize_size=resize_size,seq_len=seq_len)
     valid_dataset = block(data=valid_set,stride=seq_len,shuffle=False, resize_size=resize_size,seq_len=seq_len)
