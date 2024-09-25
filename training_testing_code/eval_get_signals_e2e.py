@@ -174,7 +174,7 @@ else:
     resize_size=128
 
 if method == "tscan" or method == "efficientphys" or method == "deepphys":
-    valid_dataset = block_deephys(data=valid_set,stride=valid_stride,shuffle=False, resize_size=resize_size,seq_len=seq_len)
+    valid_dataset = block_deepphys(data=valid_set,stride=valid_stride,shuffle=False, resize_size=resize_size,seq_len=seq_len)
 else:
     valid_dataset = block(data=valid_set,stride=valid_stride,shuffle=False, resize_size=resize_size,seq_len=seq_len)
 
