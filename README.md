@@ -5,7 +5,7 @@ In this study we propose the first dataset containing a wide set of physical dom
 
 You can check our paper on the following link ([https://link.springer.com/chapter/10.1007/978-3-031-73464-9_4](https://link.springer.com/chapter/10.1007/978-3-031-73464-9_4)). In this repository you will find all the necessary code to run baseline methods on the pre-processed data, and also the pre-processing code. Due to strict regulations governing the use of sensitive data we cannot publish it directly, if you want to utilize our dataset for academic purposes please contact guoying.zhao@oulu.fi to request a copy.
 
-The shared data may be used only in strict accordance with a mutually signed Data Transfer Agreement, which terms dictate the usage of the data (academic, non-commercial, non-distributable). For publications not all subjects have given consent for their images to be used in graphics. Only images from subject IDs **001-017,019-022,025-030** may be used in publications. It is prohibited to use sample images from IDs 018, 023, 024.
+The shared data may be used only in strict accordance with a mutually signed Data Transfer Agreement, which terms dictate the usage of the data (academic, non-commercial, non-distributable). For publications, not all subjects have given consent for their images to be used in graphics. Only images from subject IDs **001-017,019-022,025-030** may be used in publications. It is prohibited to use sample images from IDs 018, 023, 024.
 
 # Physical Domain Attacks in RPPG
 
